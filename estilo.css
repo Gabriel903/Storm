@@ -101,6 +101,45 @@ h3 {
 
 }
 
+#negocios .slider {
+	width: calc(100% - 150px);
+	display: block;
+	position: initial;
+	color: #fff;
+}
+
+#negocios .sidebar {
+	width: 28%;
+	display: inline-block;
+	vertical-align: top;
+	color: #fff;
+}
+
+#negocios .content {
+	position: relative;
+	width: 100%;
+	max-width: 70%;
+	display: inline-block;
+	text-align: left;
+}
+
+#negocios .content .slick-prev {
+	position: absolute;
+	right: 50px;
+	top: 90px;
+	left: initial;
+}
+
+
+#negocios .content .slick-next {
+	position: absolute;
+	right: 50px;
+	top: 0px;
+}
+
+
+
+
 
 /* FOOTER */
 
@@ -121,6 +160,7 @@ h3 {
     text-align: center;
     color: #ddeaf5;
     font-size: 102%;
+    display: block;
 }
 
 #rodape .header .bd.left {
@@ -150,10 +190,24 @@ h3 {
 
 /* FORMULARIO DE CONTATO  */
 
-#rodape .formDeContato {
+#rodape .form {
 
     height: 68%;
     width: 50%;
-	background: red;
+	background: url('img/sombra-contato.png') no-repeat right top;
 }
+
+#rodape .form  fieldset {
+    padding-bottom: 20px;
+    position: relative;
+    display: block;
+}
+
+article.form , address {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+
 
