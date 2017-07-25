@@ -19,5 +19,17 @@ jQuery( document ).ready(function($) {
   		$sidebar.find('span').removeClass('active');
   		$sidebar.find('span:nth-child('+ (currentSlide + 1) +')').addClass('active');
 	});
+
+	$('.toggle-menu').click(function(e){
+
+		$(this).toggleClass('active');
+
+		$('#navbar .g1').toggleClass('active');
+
+		e.preventDefault();
+
+	});
  
 });
+
+
