@@ -29,6 +29,26 @@ jQuery( document ).ready(function($) {
 		e.preventDefault();
 
 	});
+
+	$( document ).on('click', '.toggle-menu', function(e) {
+		e.preventDefault();
+
+		var $menu = $('#menu');
+
+		if ( ! $menu.hasClass('active') ) {
+			$menu.addClass('active').slideToggle(500);
+		} else {
+			$menu.removeClass('active').slideToggle(500);
+		}
+	});
+
+	var $width = $(window).width();
+
+	if ( $width <= 990 ) {
+		var endereco = $('#rodape address p:first-child').html();
+
+		$('#menu').append( '<li class="address">'+ endereco +'</li>' );
+	}
  
 });
 

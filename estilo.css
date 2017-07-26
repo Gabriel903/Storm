@@ -6,6 +6,7 @@
 
 body {
 	min-width: 990px;
+    overflow-x: hidden;
 }
 
 h3 {
@@ -30,11 +31,12 @@ h3 {
  
 #navbar .logo {
     background: url('img/storm-logo.png') no-repeat 0 0;
-    width: 284px;
+    width: 255px;
     height: 26px;
+    display: inline-block;
+    vertical-align: middle;
     position: relative;
-    top: 14px;
-    left: 24px;
+    margin-left: 15px;
 }
 	
 
@@ -47,27 +49,31 @@ h3 {
 
 	
 .g1 {
-	float: right;
+	display: inline-block;
+    vertical-align: middle;
+    width: calc( 100% - 290px );
 	list-style: none;
 }
 
 .g1 .g2 {
-	display: inline-block;	
+	display: inline-block;
 }
 
 .g1 .g2 a {
 	color: #fefefe;
 	display: block;
-	margin: 18px 20px 0px 19px;
+	margin: 6px 20px 6px 19px;
 	font-size: 15px;
 	text-transform: uppercase;
 	text-decoration: none;
-
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 3px solid transparent;
 }
 
 .g2 a:hover {
 	border-bottom: 3px solid yellow;
-	padding-bottom: 10px;
+
 }
 
 #navbar .toggle-menu {	
@@ -225,6 +231,8 @@ h3 {
 }
 
 #rodape .form  fieldset {
+    border: 0;
+    box-shadow: none;
     padding-bottom: 20px;
     position: relative;
     display: block;
@@ -236,6 +244,7 @@ article.form , address {
 }
 
 #rodape .form .title {
+    padding-top: 30px;
     font-size: 1.5em;
     margin-bottom: 15px;
     color: #e4f2fd;
@@ -285,7 +294,142 @@ article.form , address {
   	padding-left: 20px;
   }
 
+}
 
+@media ( max-width: 990px ) {
+    body {
+        min-width: initial;
+    }
 
+    .container {
+        width: 100%;
+        max-width: 500px;
+        float: none;
+        display: block;
+        height: auto;
+    }
 
+    #banner-1{
+        height: auto;
+        padding-top: 100px;
+    }
 
+    #navbar {
+        width: 100%;
+        max-width: 500px;
+        float: none;
+        height: auto;
+        min-height: 60px;
+        margin-left: 0;
+        display: block;
+        left: 50%;
+        top: 0;
+        z-index: 99999;
+        background: transparent;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    #navbar .logo {
+        background: #313132 url(img/storm-logo.png) no-repeat center;
+        width: 100%;
+        height: 60px;
+        position: relative;
+        background-size: auto;
+        margin: 0;
+        display: block;
+    }
+
+    #menu {
+        display: none;
+        width: 100%;
+        max-width: 60%;
+        margin-left: auto;
+    }
+
+    #menu li {
+        display: block;
+        text-align: center;
+    }
+
+    #navbar .toggle-menu {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 28px;
+        font-weight: 300;
+        z-index: 2;
+    }
+
+    #navbar .g1 .g2, #navbar .address {
+        background: #313132;
+    }
+
+    #navbar .address{
+        color: #fff;
+        font-size: 14px;
+        padding-bottom: 10px;
+        text-align: left;
+        padding-left: 15px;
+        padding-top: 10px;
+    }
+
+    .g1 .g2 a {
+        margin: 0;
+    }
+
+    #banner-1 .slick-prev, #banner-1 .slick-next {
+        z-index: 999;
+        width: 60px;
+    }
+
+    #banner-1 .slick-next { right: 0; }
+    #banner-1 .slick-prev { left: 0; }
+
+    #negocios .content {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #negocios .slider {
+        width: calc(100% - 90px);
+    }
+
+    #negocios .content .slick-prev, #negocios .content .slick-next {
+        width: 60px;
+        right: 0;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    article.slick-slide{
+        padding: 10px;
+    }
+
+    #negocios .sidebar{
+        width: 100%;
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    #negocios .sidebar span{
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    #banner-1 {
+        padding-top: 60px;
+        padding-bottom: 0;
+    }
+}
